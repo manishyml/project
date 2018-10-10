@@ -19,6 +19,7 @@ router.post("/register", (req, res) => {
 });
 router.get("/register", (req, res) => {
   model.find({}).then(ideas => {
+    console.log(ideas);
     res.json({ ideas });
   });
 });
