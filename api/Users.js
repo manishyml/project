@@ -15,7 +15,7 @@ router.post("/register", (req, res) => {
   newUser
     .save()
     .then(user => res.json(user))
-    .catch(err => res.json({ message: err }).status(403));
+    .catch(err => res.json({ message: err }).sendStatus(403));
 });
 
 module.exports = router;
