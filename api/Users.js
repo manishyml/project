@@ -18,7 +18,7 @@ router.post("/register", (req, res) => {
     .catch(err => res.sendStatus(403).json({ message: err }));
 });
 router.get("/register", (req, res) => {
-  model.find({}).then(ideas => {
+  Users.find({}).then(ideas => {
     console.log(ideas);
     res.json({ ideas });
   });
