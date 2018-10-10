@@ -17,5 +17,10 @@ router.post("/register", (req, res) => {
     .then(user => res.json(user))
     .catch(err => res.sendStatus(403).json({ message: err }));
 });
+router.get("/register", (req, res) => {
+  model.find({}).then(ideas => {
+    res.json({ ideas });
+  });
+});
 
 module.exports = router;
