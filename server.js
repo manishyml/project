@@ -4,10 +4,12 @@ const app = express();
 const mongoose = require("mongoose");
 const url = "mongodb://manish:passwordyml123@ds245150.mlab.com:45150/project";
 const users = require("./api/Users.js");
+const cors = require("cors");
 
 //adding middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 //Connect to mongoDB
 mongoose
