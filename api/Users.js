@@ -26,8 +26,6 @@ router.get("/register", (req, res) => {
 
 router.get("/checkUser/:Email", (req, res) => {
   Users.find({ Email: req.params.Email }).then(user => {
-    console.log(user);
-    console.log(req.params.Email);
     res.json({ user: user[0].User_Type });
   });
 });
