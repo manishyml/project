@@ -6,7 +6,7 @@ router.get("/test", (req, res) => {
   res.json({ msg: "welcome to users api" });
 });
 
-router.post("/register", (req, res) => {
+router.post("/new", (req, res) => {
   const newUser = new Projects({
     Project_Id: req.body.Project_Id,
     Project_Name: req.body.Project_Name,
@@ -19,7 +19,7 @@ router.post("/register", (req, res) => {
     .then(user => res.json(user))
     .catch(err => res.sendStatus(403).json({ message: err }));
 });
-router.get("/register", (req, res) => {
+router.get("/new", (req, res) => {
   Projects.find({}).then(users => {
     console.log(users);
     res.json({ users });
