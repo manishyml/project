@@ -15,7 +15,7 @@ const ProjectsSchema = new Schema({
     required: true
   },
   Deal_Amount: {
-    type: String,
+    type: Number,
     required: true
   },
   Description: {
