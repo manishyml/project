@@ -1,16 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const Users = require("../models/users");
+const Projects = require("../models/projects");
 
 router.get("/test", (req, res) => {
   res.json({ msg: "welcome to users api" });
 });
 
 router.post("/register", (req, res) => {
-  const newUser = new Users({
-    Employee_Id: req.body.Employee_Id,
-    Email: req.body.Email,
-    User_Type: req.body.User_Type
+  const newUser = new Projects({
+    Project_Id: req.body.Project_Id,
+    Project_Name: req.body.Project_Name,
+    Dealership: req.body.Dealership,
+    Deal_Amount: req.body.Deal_Amount,
+    Description: req.body.Description
   });
   newUser
     .save()
@@ -18,7 +20,7 @@ router.post("/register", (req, res) => {
     .catch(err => res.sendStatus(403).json({ message: err }));
 });
 router.get("/register", (req, res) => {
-  Users.find({}).then(users => {
+  Projects.find({}).then(users => {
     console.log(users);
     res.json({ users });
   });
