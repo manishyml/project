@@ -17,6 +17,7 @@ router.post("/register", (req, res) => {
     .then(user => res.json(user))
     .catch(err => res.sendStatus(403).json({ message: err }));
 });
+
 router.get("/register", (req, res) => {
   Users.find({}).then(users => {
     console.log(users);

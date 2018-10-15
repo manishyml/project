@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const UpdatesSchema = new Schema({
-  Project_id: {
+  Project_Id: {
     type: Number,
     required: true
   },

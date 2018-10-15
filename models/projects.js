@@ -21,6 +21,14 @@ const ProjectsSchema = new Schema({
   Description: {
     type: String,
     required: true
+  },
+  Team: {
+    type: Array,
+    required: true
+  },
+  Date: {
+    type: Date,
+    default: Date.now
   }
 });
 

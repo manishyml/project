@@ -12,7 +12,8 @@ router.post("/new", (req, res) => {
     Project_Name: req.body.Project_Name,
     Dealership: req.body.Dealership,
     Deal_Amount: req.body.Deal_Amount,
-    Description: req.body.Description
+    Description: req.body.Description,
+    Team: req.body.Team
   });
   newUser
     .save()
@@ -25,5 +26,4 @@ router.get("/new", (req, res) => {
     res.json({ users });
   });
 });
-
 module.exports = router;
