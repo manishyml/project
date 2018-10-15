@@ -17,7 +17,10 @@ router.post("/new", (req, res) => {
   });
   newUser
     .save()
-    .then(user => res.json(user))
+    .then(user => {
+      res.json(user);
+      res.send("Data Added To Database");
+    })
     .catch(err => res.sendStatus(403).json({ message: err }));
 });
 router.get("/new", (req, res) => {
