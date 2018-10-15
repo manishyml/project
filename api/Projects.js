@@ -23,7 +23,7 @@ router.post("/new", (req, res) => {
     })
     .catch(err => res.json({ message: err }));
 });
-router.get("/new", (req, res) => {
+router.get("/all", (req, res) => {
   Projects.find({}).then(users => {
     console.log(users);
     res.json({ users });

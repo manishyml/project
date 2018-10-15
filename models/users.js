@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 //create schema for users
 const usersSchema = new Schema({
   Employee_Id: {
-    type: Number,
+    type: String,
     required: true
   },
   Email: {

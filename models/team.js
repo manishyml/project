@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const TeamSchema = new Schema({
   Project_Id: {
-    type: Number,
+    type: String,
     required: true
   },
   Employee_Id: {

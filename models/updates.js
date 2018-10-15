@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const UpdatesSchema = new Schema({
   Project_Id: {
-    type: Number,
+    type: String,
     required: true
   },
   Updated_By: {
