@@ -7,14 +7,7 @@ router.get("/test", (req, res) => {
 });
 
 router.post("/new", (req, res) => {
-  const newUser = new Projects({
-    Project_Id: req.body.Project_Id,
-    Project_Name: req.body.Project_Name,
-    Dealership: req.body.Dealership,
-    Deal_Amount: req.body.Deal_Amount,
-    Description: req.body.Description,
-    Team: req.body.Team
-  });
+  const newUser = new Projects(req.body);
   newUser
     .save()
     .then(user => {
